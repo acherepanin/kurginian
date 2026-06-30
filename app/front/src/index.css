@@ -1,0 +1,178 @@
+:root {
+  --bg: oklch(1 0 0);
+  --surface: oklch(0.978 0.005 80);
+  --surface-2: oklch(0.955 0.008 80);
+  --ink: oklch(0.23 0.014 70);
+  --muted: oklch(0.46 0.018 70);
+  --line: oklch(0.9 0.008 80);
+
+  --primary: oklch(0.4 0.115 264);
+  --primary-deep: oklch(0.29 0.095 265);
+  --primary-soft: oklch(0.95 0.02 264);
+  --on-primary: oklch(0.985 0.004 80);
+
+  --accent: oklch(0.72 0.13 74);
+  --accent-deep: oklch(0.55 0.11 70);
+  --accent-soft: oklch(0.93 0.04 78);
+
+  --focus: oklch(0.55 0.14 264);
+
+  --font-display: "Spectral", Georgia, "Times New Roman", serif;
+  --font-body: "Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.92rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.12rem);
+  --step-1: clamp(1.2rem, 1.12rem + 0.4vw, 1.45rem);
+  --step-2: clamp(1.45rem, 1.3rem + 0.75vw, 1.95rem);
+  --step-3: clamp(1.8rem, 1.55rem + 1.25vw, 2.7rem);
+  --step-4: clamp(2.2rem, 1.7rem + 2.5vw, 3.6rem);
+  --step-5: clamp(2.7rem, 1.9rem + 4vw, 5rem);
+
+  --space-2xs: clamp(0.5rem, 0.45rem + 0.25vw, 0.65rem);
+  --space-xs: clamp(0.75rem, 0.68rem + 0.35vw, 1rem);
+  --space-sm: clamp(1rem, 0.9rem + 0.5vw, 1.4rem);
+  --space-md: clamp(1.5rem, 1.3rem + 1vw, 2.2rem);
+  --space-lg: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+  --space-xl: clamp(4rem, 3rem + 5vw, 7rem);
+
+  --radius-sm: 10px;
+  --radius: 14px;
+  --radius-lg: 18px;
+
+  --shadow-soft: 0 1px 2px oklch(0.29 0.09 265 / 0.04),
+    0 8px 24px oklch(0.29 0.09 265 / 0.06);
+  --shadow-lift: 0 18px 50px oklch(0.29 0.09 265 / 0.16);
+
+  --maxw: 73rem;
+  --prose: 40rem;
+
+  /* Signature form: an arched "portal/niche" used on the portrait. */
+  --arch: 47% 47% 16px 16px / 33% 33% 3% 3%;
+
+  --z-sticky: 20;
+  --z-header: 30;
+  --z-menu: 40;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.app-main {
+  overflow: clip;
+}
+
+.section {
+  padding-block: var(--space-xl);
+}
+
+.shell {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: clamp(1.1rem, 0.7rem + 2vw, 2.2rem);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 1.6rem;
+  height: 1px;
+  background: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
