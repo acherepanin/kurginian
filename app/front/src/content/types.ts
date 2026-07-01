@@ -10,8 +10,17 @@ export interface SiteContent {
     about: string;
     reviews: string;
     faq: string;
+    menu: string;
   };
   lang: { switchTo: string; current: string };
+  a11y: {
+    prevSlide: string;
+    nextSlide: string;
+    close: string;
+    openPhoto: string;
+    openCert: string;
+    ratingOutOf: string;
+  };
   hero: {
     badge: string;
     summary: string;
@@ -41,6 +50,7 @@ export interface SiteContent {
     eyebrow: string;
     heading: string;
     note: string;
+    hint: string;
     items: { title: string; meta?: string; image?: string }[];
   };
   reviews: {

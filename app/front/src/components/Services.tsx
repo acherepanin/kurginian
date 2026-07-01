@@ -21,12 +21,6 @@ export function Services() {
             <p className="section-note">{c.services.note}</p>
           </Reveal>
         </div>
-        <SliderArrows
-          atStart={atStart}
-          atEnd={atEnd}
-          onPrev={() => scrollByCard(-1)}
-          onNext={() => scrollByCard(1)}
-        />
       </div>
 
       <ul className="slide-track" ref={trackRef}>
@@ -41,6 +35,12 @@ export function Services() {
 
       <div className="shell service-foot">
         <SliderDots count={c.services.items.length} active={active} />
+        <SliderArrows
+          atStart={atStart}
+          atEnd={atEnd}
+          onPrev={() => scrollByCard(-1)}
+          onNext={() => scrollByCard(1)}
+        />
       </div>
     </section>
   );

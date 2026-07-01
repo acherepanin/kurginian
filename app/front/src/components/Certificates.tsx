@@ -25,12 +25,6 @@ export function Certificates() {
             <p className="section-note">{c.certificates.note}</p>
           </Reveal>
         </div>
-        <SliderArrows
-          atStart={atStart}
-          atEnd={atEnd}
-          onPrev={() => scrollByCard(-1)}
-          onNext={() => scrollByCard(1)}
-        />
       </div>
 
       <ul className="slide-track" ref={trackRef}>
@@ -43,7 +37,7 @@ export function Certificates() {
                   type="button"
                   className="cert-thumb"
                   onClick={() => setZoom({ src: item.image!, alt: item.title })}
-                  aria-label={`Открыть сертификат: ${item.title}`}
+                  aria-label={`${c.a11y.openCert}: ${item.title}`}
                 >
                   <img src={item.image} alt={item.title} />
                 </button>
@@ -57,7 +51,7 @@ export function Certificates() {
                 {item.meta ? <span className="cert-meta">{item.meta}</span> : null}
               </div>
               {clickable ? (
-                <span className="cert-hint">Открыть</span>
+                <span className="cert-hint">{c.certificates.hint}</span>
               ) : null}
             </li>
           );
@@ -66,6 +60,12 @@ export function Certificates() {
 
       <div className="shell service-foot">
         <SliderDots count={c.certificates.items.length} active={active} />
+        <SliderArrows
+          atStart={atStart}
+          atEnd={atEnd}
+          onPrev={() => scrollByCard(-1)}
+          onNext={() => scrollByCard(1)}
+        />
       </div>
 
       {zoom ? (

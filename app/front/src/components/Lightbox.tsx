@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
+import { useContent } from "../hooks/useContent";
 
 interface LightboxProps {
   src: string;
@@ -10,6 +11,7 @@ interface LightboxProps {
 }
 
 export function Lightbox({ src, alt, caption, onClose }: LightboxProps) {
+  const { c } = useContent();
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -25,7 +27,12 @@ export function Lightbox({ src, alt, caption, onClose }: LightboxProps) {
 
   return createPortal(
     <div className="lightbox" role="dialog" aria-modal="true" onClick={onClose}>
-      <button type="button" className="lightbox-close" aria-label="Закрыть">
+      <button
+        type="button"
+        className="lightbox-close"
+        aria-label={c.a11y.close}
+        onClick={onClose}
+      >
         <X size={22} />
       </button>
       <figure className="lightbox-figure" onClick={(e) => e.stopPropagation()}>

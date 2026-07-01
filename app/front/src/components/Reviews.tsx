@@ -27,19 +27,16 @@ export function Reviews() {
             <p className="section-note">{c.reviews.note}</p>
           </Reveal>
         </div>
-        <SliderArrows
-          atStart={atStart}
-          atEnd={atEnd}
-          onPrev={() => scrollByCard(-1)}
-          onNext={() => scrollByCard(1)}
-        />
       </div>
 
       <ul className="slide-track" ref={trackRef}>
         {c.reviews.items.map((item, i) => (
           <li className="slide-card review-card" key={`${item.name}-${i}`}>
             <Quote className="review-quote" size={26} aria-hidden="true" />
-            <div className="review-stars" aria-label={`${item.rating} из 5`}>
+            <div
+              className="review-stars"
+              aria-label={`${item.rating} ${c.a11y.ratingOutOf}`}
+            >
               {Array.from({ length: 5 }).map((_, s) => (
                 <Star
                   key={s}
@@ -67,6 +64,12 @@ export function Reviews() {
 
       <div className="shell service-foot">
         <SliderDots count={c.reviews.items.length} active={active} />
+        <SliderArrows
+          atStart={atStart}
+          atEnd={atEnd}
+          onPrev={() => scrollByCard(-1)}
+          onNext={() => scrollByCard(1)}
+        />
       </div>
 
       {zoom ? (

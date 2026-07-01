@@ -12,8 +12,17 @@ export const en: SiteContent = {
     about: "About",
     reviews: "Reviews",
     faq: "FAQ",
+    menu: "Menu",
   },
   lang: { switchTo: "Переключить на русский", current: "EN" },
+  a11y: {
+    prevSlide: "Previous",
+    nextSlide: "Next",
+    close: "Close",
+    openPhoto: "Open photo",
+    openCert: "Open certificate",
+    ratingOutOf: "out of 5",
+  },
   hero: {
     badge: "By appointment",
     summary:
@@ -114,6 +123,7 @@ export const en: SiteContent = {
     eyebrow: "Qualifications",
     heading: "Certificates & professional development",
     note: "Sample list. Replace with real certificates. You can attach a photo of the document (image field) — it opens on click.",
+    hint: "Open",
     items: [
       { title: "Board certificate in Obstetrics & Gynecology", meta: "Add year" },
       { title: "Ultrasound diagnostics in obstetrics and gynecology", meta: "Add year" },

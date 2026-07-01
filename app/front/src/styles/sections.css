@@ -103,14 +103,15 @@
 }
 .brand-mark {
   display: block;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.6rem;
+  height: 2.6rem;
   flex-shrink: 0;
-}
-.brand-mark svg {
-  display: block;
-  width: 100%;
-  height: 100%;
+  border-radius: 50%;
+  background-color: var(--surface-2);
+  background-repeat: no-repeat;
+  background-size: 195%;
+  background-position: 52% 23%;
+  box-shadow: inset 0 0 0 1.5px oklch(0.72 0.13 74 / 0.55);
 }
 .brand-text {
   display: flex;
@@ -194,6 +195,86 @@
 }
 .lang-sep {
   color: var(--line);
+}
+
+/* ============ Mobile / tablet menu ============ */
+.header-shell {
+  position: relative;
+}
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: oklch(1 0 0 / 0.6);
+  color: var(--primary);
+  flex-shrink: 0;
+  transition:
+    border-color 0.2s var(--ease-out),
+    color 0.2s var(--ease-out),
+    background-color 0.2s var(--ease-out);
+}
+.nav-toggle:hover {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+.mobile-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  z-index: var(--z-menu);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.6rem;
+  border-radius: var(--radius-lg);
+  background: oklch(1 0 0 / 0.97);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-lift);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px) scale(0.99);
+  transform-origin: top center;
+  pointer-events: none;
+  transition:
+    opacity 0.22s var(--ease-out),
+    transform 0.22s var(--ease-out),
+    visibility 0.22s var(--ease-out);
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--line);
+}
+.mobile-nav-link {
+  padding: 0.75rem 0.85rem;
+  border-radius: var(--radius);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  transition:
+    background-color 0.2s var(--ease-out),
+    color 0.2s var(--ease-out);
+}
+.mobile-nav-link:hover,
+.mobile-nav-link:focus-visible {
+  background: var(--surface-2);
+  color: var(--primary);
 }
 
 /* ============ Hero ============ */
@@ -282,6 +363,8 @@
   margin: 0;
   border-radius: var(--arch);
   overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 50% 8%, var(--surface), var(--surface-2));
   box-shadow:
     var(--shadow-lift),
     inset 0 0 0 1px oklch(0.72 0.13 74 / 0.22);
@@ -898,8 +981,11 @@
   margin: var(--space-md) 0 0;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 0.75rem;
+}
+.channels > li {
+  min-width: 0;
 }
 .channel {
   display: flex;
@@ -1053,6 +1139,28 @@
   }
 }
 
+/* On phones the inline booking button is redundant with the menu + sticky bar. */
+@media (max-width: 639px) {
+  .header-cta {
+    display: none;
+  }
+  /* Tighter contact rows so longer values (address) fit on one line. */
+  .channel {
+    padding: 0.8rem 0.85rem;
+    gap: 0.7rem;
+  }
+  .channel-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  .channel-label {
+    font-size: 0.76rem;
+  }
+  .channel-value {
+    font-size: var(--step--1);
+  }
+}
+
 @media (min-width: 600px) {
   .service-card {
     flex-basis: 20rem;
@@ -1071,6 +1179,12 @@
 @media (min-width: 880px) {
   .site-nav {
     display: flex;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
   }
   .sticky-cta {
     display: none;

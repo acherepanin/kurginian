@@ -1,4 +1,5 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useContent } from "../hooks/useContent";
 
 interface ArrowsProps {
   atStart: boolean;
@@ -8,6 +9,7 @@ interface ArrowsProps {
 }
 
 export function SliderArrows({ atStart, atEnd, onPrev, onNext }: ArrowsProps) {
+  const { c } = useContent();
   return (
     <div className="slide-controls">
       <button
@@ -15,7 +17,7 @@ export function SliderArrows({ atStart, atEnd, onPrev, onNext }: ArrowsProps) {
         className="slide-btn"
         onClick={onPrev}
         disabled={atStart}
-        aria-label="Назад"
+        aria-label={c.a11y.prevSlide}
       >
         <ArrowLeft size={18} />
       </button>
@@ -24,7 +26,7 @@ export function SliderArrows({ atStart, atEnd, onPrev, onNext }: ArrowsProps) {
         className="slide-btn"
         onClick={onNext}
         disabled={atEnd}
-        aria-label="Вперёд"
+        aria-label={c.a11y.nextSlide}
       >
         <ArrowRight size={18} />
       </button>

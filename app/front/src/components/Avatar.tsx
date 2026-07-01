@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useContent } from "../hooks/useContent";
 
 interface AvatarProps {
   name: string;
@@ -16,6 +17,7 @@ function initialsOf(name: string) {
 }
 
 export function Avatar({ name, src, onOpen }: AvatarProps) {
+  const { c } = useContent();
   const [broken, setBroken] = useState(false);
 
   if (src && !broken) {
@@ -24,7 +26,7 @@ export function Avatar({ name, src, onOpen }: AvatarProps) {
         type="button"
         className="avatar avatar-btn"
         onClick={() => onOpen?.(src)}
-        aria-label={`Открыть фото: ${name}`}
+        aria-label={`${c.a11y.openPhoto}: ${name}`}
       >
         <img src={src} alt={name} onError={() => setBroken(true)} />
       </button>

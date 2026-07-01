@@ -12,8 +12,17 @@ export const ru: SiteContent = {
     about: "О враче",
     reviews: "Отзывы",
     faq: "Вопросы",
+    menu: "Меню",
   },
   lang: { switchTo: "Switch to English", current: "RU" },
+  a11y: {
+    prevSlide: "Назад",
+    nextSlide: "Вперёд",
+    close: "Закрыть",
+    openPhoto: "Открыть фото",
+    openCert: "Открыть сертификат",
+    ratingOutOf: "из 5",
+  },
   hero: {
     badge: "Приём по записи",
     summary:
@@ -114,6 +123,7 @@ export const ru: SiteContent = {
     eyebrow: "Квалификация",
     heading: "Сертификаты и повышение квалификации",
     note: "Список-образец. Замените реальными сертификатами. Можно добавить фото документа (поле image) — оно откроется по клику.",
+    hint: "Открыть",
     items: [
       { title: "Сертификат по специальности «Акушерство и гинекология»", meta: "Укажите год" },
       { title: "УЗ-диагностика в акушерстве и гинекологии", meta: "Укажите год" },
