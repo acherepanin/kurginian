@@ -28,7 +28,6 @@ export function Hero() {
 
   return (
     <section className="hero" id="top">
-      <div className="hero-glow" aria-hidden="true" />
       <div className="shell hero-grid">
         <div className="hero-copy">
           <motion.span className="hero-badge" {...rise(0.05)}>
@@ -82,7 +81,7 @@ export function Hero() {
             />
             <figcaption className="hero-figcap">
               <span className="hero-figcap-dot" aria-hidden="true" />
-              {c.doctor.location}
+              {c.doctor.role}
             </figcaption>
           </figure>
         </motion.div>

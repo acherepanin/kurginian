@@ -3,136 +3,166 @@ import type { SiteContent } from "./types";
 export const en: SiteContent = {
   doctor: {
     name: "Kristina Kurginyan",
-    role: "Pediatrician",
-    location: "Moscow",
-    portraitAlt: "Kristina Kurginyan, pediatrician, in her consulting room",
+    role: "Obstetrician-Gynecologist",
+    portraitAlt: "Kristina Kurginyan, obstetrician-gynecologist, in her consulting room",
   },
   nav: {
-    services: "Care",
-    prices: "Skills",
+    services: "Services",
+    prices: "Pricing",
     about: "About",
+    reviews: "Reviews",
     faq: "FAQ",
   },
   lang: { switchTo: "Переключить на русский", current: "EN" },
   hero: {
     badge: "By appointment",
     summary:
-      "I care for children from birth to 18: preventive check-ups, help when they are ill, vaccination and follow-up. I calmly explain to parents what is happening and what to do.",
+      "I care for women's health at every stage: routine check-ups, pregnancy management, gynecological concerns and planning. I explain calmly and clearly — without fear or unnecessary prescriptions.",
     ctaPrimary: "Book an appointment",
-    ctaSecondary: "How I can help",
-    chips: ["Primary-care pediatrician", "Children 0–18", "Moscow"],
-  },
-  stats: [
-    { value: "0–18", label: "years, children of any age" },
-    { value: "since 2023", label: "in pediatric practice" },
-    { value: "3", label: "clinics in professional experience" },
-    { value: "TSMU", label: "specialized medical degree" },
-  ],
-  about: {
-    eyebrow: "About",
-    heading: "A children's doctor parents trust",
-    body: [
-      "I am a pediatrician in Moscow. I work with children of all ages in city clinics and a medical center: primary-care visits, development monitoring, and help with acute and chronic conditions.",
-      "I graduated from the pediatric faculty of Tver State Medical University. I am attentive to every child and create a calm, trusting atmosphere for children and parents. I keep learning through conferences and professional courses.",
-    ],
-    credentials: [
-      {
-        period: "2023",
-        title: "Pediatric faculty",
-        place: "Tver State Medical University",
-      },
-      {
-        period: "2023–2024",
-        title: "Pediatrician",
-        place: "Gigeya Medical Center",
-      },
-      {
-        period: "2023–2024",
-        title: "Primary-care pediatrician",
-        place: "Andreevskaya City Clinic, Moscow region",
-      },
-      {
-        period: "2024 — now",
-        title: "Primary-care pediatrician",
-        place: "Children's City Clinic No. 52, Moscow",
-      },
-    ],
+    ctaSecondary: "Services & pricing",
+    chips: ["Obstetrician-Gynecologist", "Pregnancy management", "Ultrasound on-site"],
   },
   services: {
     eyebrow: "Focus areas",
     heading: "How I can help",
-    note: "Care for children from birth to 18.",
+    note: "Full-spectrum women's health care — from planning to follow-up.",
     items: [
       {
-        title: "Preventive check-up",
-        desc: "Routine examination and age-based development assessment, with care advice.",
+        title: "Gynecological visit",
+        desc: "Examination, consultation and an individual plan for testing and treatment.",
       },
       {
-        title: "Visit when ill",
-        desc: "Diagnosis and treatment of respiratory infections and acute conditions in children.",
+        title: "Pregnancy management",
+        desc: "Support at every stage: monitoring, tests and calm preparation for birth.",
       },
       {
-        title: "Care from birth",
-        desc: "Infant follow-up, monitoring of growth, development and nutrition in the first year.",
+        title: "Pelvic ultrasound",
+        desc: "Ultrasound diagnostics during the visit with a clear explanation of the results.",
       },
       {
-        title: "Vaccination",
-        desc: "Building and guiding an individual immunization schedule.",
+        title: "Pregnancy planning",
+        desc: "Preconception preparation, couple assessment and correction of any findings.",
       },
       {
-        title: "Certificates & forms",
-        desc: "Medical certificates for daycare, school, sports clubs and the swimming pool.",
+        title: "Infections & inflammation",
+        desc: "Diagnosis and treatment of infectious and inflammatory conditions by modern protocols.",
       },
       {
-        title: "Parent consultation",
-        desc: "Reviewing test results, answering questions on health, care and daily routine.",
-      },
-    ],
-  },
-  skills: {
-    eyebrow: "Strengths",
-    heading: "Skills & qualities",
-    note: "What I bring to the visit and to working with the family.",
-    groups: [
-      {
-        title: "Professional skills",
-        items: [
-          "Clinical diagnosis and treatment",
-          "Care for children of all ages",
-          "Immunization",
-          "Decisions in non-standard situations",
-          "Working with children and parents",
-          "Continuous professional development",
-        ],
-      },
-      {
-        title: "Personal qualities",
-        items: [
-          "Responsibility",
-          "Attentiveness",
-          "Love for children",
-          "Communication",
-          "Empathy",
-          "Determination",
-        ],
+        title: "Menopause & hormones",
+        desc: "Help with hormonal imbalances and support through the menopause transition.",
       },
     ],
   },
-  visit: {
-    eyebrow: "The visit",
-    heading: "How a visit goes",
-    steps: [
+  prices: {
+    eyebrow: "Pricing",
+    heading: "Appointment pricing",
+    note: "Prices are indicative — the final cost and scope of testing are confirmed at the visit.",
+    items: [
       {
-        title: "Talk",
-        desc: "We discuss concerns, history and the child's development. No rush, no judgment.",
+        title: "Initial visit",
+        desc: "Consultation, examination and a testing plan, up to 60 minutes.",
+        price: "from 3,500 ₽",
       },
       {
-        title: "Examination",
-        desc: "I examine the child and assess their condition for their age.",
+        title: "Follow-up visit",
+        desc: "Treatment review and adjustment of prescriptions.",
+        price: "from 2,500 ₽",
       },
       {
-        title: "Plan",
-        desc: "I explain the diagnosis and give a clear plan for treatment and follow-up.",
+        title: "Pelvic ultrasound",
+        desc: "Ultrasound examination with results explained at the visit.",
+        price: "from 2,500 ₽",
+      },
+      {
+        title: "Pregnancy management",
+        desc: "Comprehensive support, price per trimester.",
+        price: "on request",
+      },
+      {
+        title: "Online consultation",
+        desc: "Review of test results and questions over video, 30 minutes.",
+        price: "from 2,000 ₽",
+      },
+    ],
+  },
+  about: {
+    eyebrow: "About",
+    heading: "A doctor you feel at ease with",
+    body: [
+      "I am an obstetrician-gynecologist. I support patients at every stage — from planning and pregnancy to women's health questions at any age.",
+      "I work gently and by evidence-based medicine: I explain the cause in detail and prescribe only what is truly needed. I create an atmosphere where no question feels awkward to ask.",
+    ],
+    credentials: [
+      {
+        period: "2014",
+        title: "General Medicine (specialist degree)",
+        place: "Medical university — add name",
+      },
+      {
+        period: "2016",
+        title: "Residency in Obstetrics & Gynecology",
+        place: "Add institution",
+      },
+      {
+        period: "2016 — now",
+        title: "Obstetrician-Gynecologist",
+        place: "Add clinic and city",
+      },
+    ],
+  },
+  certificates: {
+    eyebrow: "Qualifications",
+    heading: "Certificates & professional development",
+    note: "Sample list. Replace with real certificates. You can attach a photo of the document (image field) — it opens on click.",
+    items: [
+      { title: "Board certificate in Obstetrics & Gynecology", meta: "Add year" },
+      { title: "Ultrasound diagnostics in obstetrics and gynecology", meta: "Add year" },
+      { title: "Cervical pathology and colposcopy", meta: "Add year" },
+      { title: "Aesthetic and intimate gynecology", meta: "Add year" },
+      { title: "Management of physiological pregnancy", meta: "Add year" },
+      { title: "Professional development course", meta: "Add topic and year" },
+    ],
+  },
+  reviews: {
+    eyebrow: "Reviews",
+    heading: "What patients say",
+    note: "These are placeholder examples. Replace them with real patient reviews (e.g. from review platforms or messenger, with consent). You can add a patient photo (avatar field).",
+    items: [
+      {
+        name: "Patient name",
+        meta: "Initial visit",
+        text: "Sample review: she explained everything in detail and prescribed nothing unnecessary. I left the visit calm for the first time. Replace this text with a real review.",
+        rating: 5,
+      },
+      {
+        name: "Patient name",
+        meta: "Pregnancy management",
+        text: "Sample review: she guided my whole pregnancy, always available and to the point. Replace this text with a real review.",
+        rating: 5,
+      },
+      {
+        name: "Patient name",
+        meta: "Ultrasound & consultation",
+        text: "Sample review: an attentive doctor — you can feel the care and professionalism. Replace this text with a real review.",
+        rating: 5,
+      },
+      {
+        name: "Patient name",
+        meta: "Pregnancy planning",
+        text: "Sample review: she helped me prepare calmly and laid everything out clearly. Replace this text with a real review.",
+        rating: 5,
+      },
+      {
+        name: "Patient name",
+        meta: "Follow-up visit",
+        text: "Sample review: the treatment was spot on, results were visible within a couple of weeks. Replace this text with a real review.",
+        rating: 5,
+      },
+      {
+        name: "Patient name",
+        meta: "Online consultation",
+        text: "Sample review: she reviewed my tests online and answered every question without rushing. Replace this text with a real review.",
+        rating: 5,
       },
     ],
   },
@@ -145,28 +175,28 @@ export const en: SiteContent = {
         a: "Tap “Book an appointment”, message me on WhatsApp or call. We will find a convenient date and time.",
       },
       {
-        q: "From what age do you see children?",
-        a: "I care for children from birth up to 18 years old.",
-      },
-      {
         q: "What should I bring to the visit?",
-        a: "The medical record or vaccination certificate and any previous test results, if you have them.",
+        a: "Previous test and exam results, medical records and a list of current medications, if you have them.",
       },
       {
-        q: "Do you help with fever and respiratory infections?",
-        a: "Yes, I diagnose and treat acute conditions in children.",
+        q: "Do you manage pregnancy?",
+        a: "Yes, I support pregnancy at every stage — from planning to preparing for birth.",
       },
       {
-        q: "Do you do preventive check-ups?",
-        a: "Yes, age-based routine examinations with growth and development assessment.",
+        q: "Do you do ultrasound during the visit?",
+        a: "Yes, when needed I perform a pelvic ultrasound during the consultation and explain the result.",
+      },
+      {
+        q: "Is an online consultation possible?",
+        a: "Yes, over video we can review test results and questions that do not require an in-person exam.",
       },
     ],
   },
   contact: {
     eyebrow: "Booking",
     heading: "Book your appointment",
-    body: "Choose the channel that suits you. I reply personally and find a time that works.",
-    ctaPrimary: "Book an appointment",
+    body: "Choose a convenient messenger or call. I reply personally and find a time that works.",
+    ctaPrimary: "Message on WhatsApp",
     note: "To book, message me on WhatsApp or call. I reply personally.",
     channels: [
       {
@@ -188,9 +218,9 @@ export const en: SiteContent = {
         kind: "email",
       },
       {
-        label: "City",
-        value: "Moscow",
-        href: "https://maps.google.com/?q=Moscow",
+        label: "Clinic address",
+        value: "15 Tverskaya St., office 204, Moscow",
+        href: "https://yandex.ru/maps/?text=Moscow, Tverskaya street, 15",
         kind: "map",
       },
     ],
@@ -198,7 +228,7 @@ export const en: SiteContent = {
   sticky: { label: "Book" },
   footer: {
     disclaimer:
-      "Information on this page is for reference only and is not a public offer or medical advice.",
+      "Information on this page is for reference only and is not a public offer or medical advice. There are contraindications; a specialist consultation is required.",
     rights: "All rights reserved.",
   },
 };

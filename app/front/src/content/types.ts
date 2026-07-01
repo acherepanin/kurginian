@@ -2,10 +2,15 @@ export interface SiteContent {
   doctor: {
     name: string;
     role: string;
-    location: string;
     portraitAlt: string;
   };
-  nav: { services: string; prices: string; about: string; faq: string };
+  nav: {
+    services: string;
+    prices: string;
+    about: string;
+    reviews: string;
+    faq: string;
+  };
   lang: { switchTo: string; current: string };
   hero: {
     badge: string;
@@ -14,29 +19,41 @@ export interface SiteContent {
     ctaSecondary: string;
     chips: string[];
   };
-  stats: { value: string; label: string }[];
-  about: {
-    eyebrow: string;
-    heading: string;
-    body: string[];
-    credentials: { period: string; title: string; place: string }[];
-  };
   services: {
     eyebrow: string;
     heading: string;
     note: string;
     items: { title: string; desc: string }[];
   };
-  skills: {
+  prices: {
     eyebrow: string;
     heading: string;
     note: string;
-    groups: { title: string; items: string[] }[];
+    items: { title: string; desc: string; price: string }[];
   };
-  visit: {
+  about: {
     eyebrow: string;
     heading: string;
-    steps: { title: string; desc: string }[];
+    body: string[];
+    credentials: { period: string; title: string; place: string }[];
+  };
+  certificates: {
+    eyebrow: string;
+    heading: string;
+    note: string;
+    items: { title: string; meta?: string; image?: string }[];
+  };
+  reviews: {
+    eyebrow: string;
+    heading: string;
+    note: string;
+    items: {
+      name: string;
+      meta: string;
+      text: string;
+      rating: number;
+      avatar?: string;
+    }[];
   };
   faq: {
     eyebrow: string;

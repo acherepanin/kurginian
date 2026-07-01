@@ -1,6 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="16" fill="#2a2c52" />
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
-    font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="600"
-    fill="#e9b873">КК</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <defs>
+    <linearGradient id="leaf" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#3c7a36" />
+      <stop offset="1" stop-color="#7cc061" />
+    </linearGradient>
+    <linearGradient id="leafR" x1="1" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#3c7a36" />
+      <stop offset="1" stop-color="#7cc061" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2d290" />
+      <stop offset="1" stop-color="#c1913f" />
+    </linearGradient>
+    <linearGradient id="goldDeep" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d9a955" />
+      <stop offset="1" stop-color="#a5761d" />
+    </linearGradient>
+  </defs>
+  <path d="M20 31C13.2 29 8.3 22.4 8.5 14.6C14.2 16.8 18.9 22.5 20 31Z" fill="url(#leaf)" />
+  <path d="M20 31C26.8 29 31.7 22.4 31.5 14.6C25.8 16.8 21.1 22.5 20 31Z" fill="url(#leafR)" />
+  <g fill="none" stroke="#255022" stroke-width="0.9" stroke-linecap="round" opacity="0.4">
+    <path d="M19.4 30C16.5 24.5 12.8 19.8 9.4 16.4" />
+    <path d="M20.6 30C23.5 24.5 27.2 19.8 30.6 16.4" />
+  </g>
+  <path d="M20 33C16.4 25.8 16.4 15 20 7.5C23.6 15 23.6 25.8 20 33Z" fill="url(#goldDeep)" />
+  <path d="M20 7.5C23.6 15 23.6 25.8 20 33L20 7.5Z" fill="url(#gold)" />
+  <path d="M20 10C20.4 18 20.4 26 20 31.5" fill="none" stroke="#8a6522" stroke-width="1" stroke-linecap="round" opacity="0.4" />
 </svg>

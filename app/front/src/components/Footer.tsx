@@ -5,17 +5,13 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="site-footer">
-      <div className="shell footer-inner">
-        <div className="footer-brand">
-          <span className="footer-name">{c.doctor.name}</span>
-          <span className="footer-role">
-            {c.doctor.role} · {c.doctor.location}
+      <div className="shell">
+        <div className="footer-inner">
+          <span className="footer-meta">{c.doctor.role}</span>
+          <span className="footer-rights">
+            © {year} · {c.footer.rights}
           </span>
         </div>
-        <p className="footer-disclaimer">{c.footer.disclaimer}</p>
-        <p className="footer-rights">
-          © {year} {c.doctor.name}. {c.footer.rights}
-        </p>
       </div>
     </footer>
   );

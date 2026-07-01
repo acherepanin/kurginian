@@ -4,14 +4,16 @@ Guidance for AI agents working in this repository.
 
 ## What this is
 
-A personal link-in-bio (taplink) website for a pediatrician (Kristina Kurginyan, Moscow). Single-page, long-scroll, mobile-first, bilingual (RU/EN). The primary goal of the page is to convert a profile visit into an appointment request / contact. It is a **static frontend**: no backend, no database. Real content comes from `app/docs/RESUME.md`; never fabricate credentials, experience numbers, or prices.
+A personal link-in-bio (taplink) website for an obstetrician-gynecologist (Kristina Kurginyan, Moscow). Single-page, long-scroll, mobile-first, bilingual (RU/EN). The primary goal of the page is to convert a profile visit into an appointment request / contact via a messenger. It is a **static frontend**: no backend, no database.
+
+> Specialty note: the site is built as an obstetrician-gynecologist per the client's instruction. This differs from the specialty in `app/docs/RESUME.md` (pediatrician), so the resume's education/experience does not apply. The `about` (education/experience/certificates), `reviews`, and `prices` sections currently contain clearly-marked placeholders. **Never fabricate real credentials, certificates, patient reviews, or prices** — they must be filled with real data by the client.
 
 ## Project layout
 
 ```
 app/front/        # the entire application (React 19 + Vite + TypeScript)
   src/
-    components/   # one file per UI section (Hero, Stats, About, Services, ...)
+    components/   # UI sections (Hero, Services, Prices, About, Certificates, Reviews, ...) + shared (Slider, Lightbox, Avatar, TruncatedText)
     content/      # all copy: types.ts (schema) + ru.ts + en.ts
     hooks/        # useContent, useSmoothScroll
     styles/       # sections.css (component styles)
@@ -43,7 +45,7 @@ Always run `npm run build` after changes; it type-checks and bundles.
 
 ## Editing content
 
-See `app/docs/DATA.md` for the full content schema. Common edits: focus areas in `services.items`, skills in `skills.groups[].items`, questions in `faq.items`, contacts in `contact.channels`. Edit both language files. There is no pricing section (the source resume has none); do not invent prices.
+See `app/docs/DATA.md` for the full content schema. Common edits: focus areas in `services.items`, prices in `prices.items`, education/experience in `about.credentials` and `about.certificates`, patient reviews in `reviews.items`, questions in `faq.items`, contacts in `contact.channels`. Edit both language files.
 
 ## Placeholders to be aware of
 

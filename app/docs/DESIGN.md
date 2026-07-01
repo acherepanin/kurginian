@@ -2,7 +2,7 @@
 
 ## Overview
 
-Personal link-in-bio (taplink) for a pediatrician. Mobile-first, single long scroll, RU/EN. Direction: "warm evening consulting room of a private clinic", deep ink-indigo carrying premium and trust, warm brass-gold for human warmth and detail, clean near-white reading surfaces. Warmth (appropriate to a children's doctor) comes from color, type and photography, never from childish cartoons. Premium through restraint, material, and motion, not ornament. The primary action (contact / request an appointment) is always reachable.
+Personal link-in-bio (taplink) for an obstetrician-gynecologist. Mobile-first, single long scroll, RU/EN. Direction: "warm evening consulting room of a private clinic", deep ink-indigo carrying premium and trust, warm brass-gold for human warmth and detail, clean near-white reading surfaces. Warmth and discretion (appropriate to sensitive women's health) come from color, type and photography, never from clinical coldness or fearmongering. Premium through restraint, material, and motion, not ornament. The primary action (contact / request an appointment) is always reachable.
 
 ## Color
 
@@ -32,7 +32,7 @@ Contrast: ink/bg >=12:1, muted/bg ~5:1, on-primary/primary >=6:1, accent-deep/bg
 
 ## Typography
 
-- **Display:** `Spectral` (refined serif, full Cyrillic). Weights 400/500/600. Used for headings, doctor name, numerals in stats.
+- **Display:** `Spectral` (refined serif, full Cyrillic). Weights 400/500/600. Used for headings, doctor name, prices and timeline numerals.
 - **Body / UI:** `Golos Text` (humanist sans designed for Russian, full Cyrillic + Latin). Weights 400/500/600.
 - Contrast axis: serif display + sans body. No third family.
 - Scale: fluid `clamp()`, ratio ~1.25. Hero display max <= 5.5rem. Display letter-spacing -0.02em floor; never below -0.04em.
@@ -40,7 +40,7 @@ Contrast: ink/bg >=12:1, muted/bg ~5:1, on-primary/primary >=6:1, accent-deep/bg
 
 ## Signature
 
-The brand's signature form is an **arch** (a portal / niche). The hero portrait is framed as a top-arched shape (`--arch` token) with an offset gold hairline frame behind it, evoking classical portraiture and a protective, caring feel suitable for a children's doctor. The abstract portrait fallback inherits the same arch. This is the page's distinctive, non-generic move; keep it consistent if the motif is reused.
+The brand's signature form is an **arch** (a portal / niche). The hero portrait is framed as a top-arched shape (`--arch` token) with an offset gold hairline frame behind it, evoking classical portraiture and a calm, protective feel. The abstract portrait fallback inherits the same arch. This is the page's distinctive, non-generic move; keep it consistent if the motif is reused.
 
 ## Layout
 
@@ -55,13 +55,13 @@ The brand's signature form is an **arch** (a portal / niche). The hero portrait 
 ## Components
 
 - **LangToggle:** RU/EN switch, persisted, top-right, keyboard-operable.
-- **Hero:** drenched indigo, portrait, name + specialty, trust line, primary + secondary CTA, scroll cue.
-- **Stat row:** honest quick facts (age range, year, clinics, university). Spectral numerals, no gradient-metric template. Never invent numbers.
-- **Services:** horizontal slide track of named focus areas (check-ups, illness, vaccination, infant care, certificates, parent consult).
-- **Skills:** professional skills + personal qualities as pill tags in two groups. Replaces a price list (no pricing data in the source resume).
-- **About:** prose with credentials/career timeline (education + work history).
+- **Hero:** drenched indigo, arched portrait, name + specialty, trust line, primary + secondary CTA.
+- **Services:** horizontal slide track of named focus areas (gynecological visit, pregnancy management, ultrasound, planning, infections, menopause).
+- **Prices:** clean price list (service + description + indicative price). Spectral numerals for the amounts. Never invent real prices — mark as indicative.
+- **About:** prose with credentials/career timeline (education + experience) plus a certificates block.
+- **Reviews:** patient testimonial cards with star rating. Placeholder samples only; never present fabricated reviews as real.
 - **FAQ:** native `<details>` accordion.
-- **Contact / Booking:** primary CTA (placeholder action), messenger + phone, address.
+- **Contact / Booking:** primary CTA to a messenger, WhatsApp + phone + email, city.
 
 ## Motion
 

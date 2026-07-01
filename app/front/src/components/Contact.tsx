@@ -7,6 +7,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { TruncatedText } from "./TruncatedText";
 import { useContent } from "../hooks/useContent";
 
 const iconFor: Record<string, LucideIcon> = {
@@ -69,7 +70,7 @@ export function Contact() {
                         </span>
                         <span className="channel-text">
                           <span className="channel-label">{ch.label}</span>
-                          <span className="channel-value">{ch.value}</span>
+                          <TruncatedText className="channel-value" text={ch.value} />
                         </span>
                       </a>
                     </li>

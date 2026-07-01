@@ -6,15 +6,15 @@ brand
 
 ## Users
 
-Parents of children (birth to 18) arriving from a social profile link (Instagram / Telegram bio) on their phone. Context: choosing a pediatrician they can trust with their child, or following up after a visit. They want fast answers: who she is, her training and experience, what she helps with, and how to reach her, without filler. A secondary audience is colleagues and employers checking her background (the page doubles as a professional profile). Bilingual reach: Russian-first parents and English-speaking / expat families in Moscow.
+Women arriving from a social profile link (Instagram / Telegram bio) on their phone. Context: choosing an obstetrician-gynecologist they can trust with sensitive, personal health matters — a routine visit, a concern, pregnancy planning or management — or following up after an appointment. They want fast answers: who she is, her training and experience, what she helps with, prices, what other patients say, and how to reach her, without filler. A secondary audience is colleagues and employers checking her background. Bilingual reach: Russian-first patients and English-speaking / expat women in Moscow.
 
 ## Product Purpose
 
-A personal link-in-bio (taplink) page for pediatrician Kristina Kurginyan. It replaces the single allowed social link with one focused mobile page that establishes trust (real education, work history, skills), explains what she helps with (check-ups, illness, vaccination, infant care), and drives the primary action: contact / request an appointment. Success = a visitor quickly understands she is a credible, caring children's doctor and reaches out. RU/EN toggle so neither audience is second-class.
+A personal link-in-bio (taplink) page for obstetrician-gynecologist Kristina Kurginyan. It replaces the single allowed social link with one focused mobile page that establishes trust (education, experience, certificates, reviews), explains what she helps with (gynecological visits, pregnancy management, ultrasound, planning), shows indicative pricing, and drives the primary action: contact / request an appointment via a convenient messenger. Success = a visitor quickly understands she is a credible, caring doctor and reaches out. RU/EN toggle so neither audience is second-class.
 
 ## Brand Personality
 
-Professional, premium, trustworthy, with warmth appropriate to a children's doctor. Voice is calm, precise, and kind, an attentive specialist speaking plainly, never salesy or clinical-cold. Three words: assured, caring, clear. Emotional goal: a parent feels reassured and in capable hands before they even book. No hype, no medical jargon walls, no childish clip-art.
+Professional, premium, trustworthy, with warmth and discretion appropriate to intimate women's health. Voice is calm, precise, and kind — an attentive specialist speaking plainly, never salesy or clinical-cold. Three words: assured, caring, clear. Emotional goal: a patient feels safe and in capable hands before she even books. No hype, no medical jargon walls, no fearmongering.
 
 ## Anti-references
 
@@ -22,7 +22,7 @@ Professional, premium, trustworthy, with warmth appropriate to a children's doct
 - Generic AI palette tells: cream/sand/beige body backgrounds, default warm-neutral near-whites, gradient text, identical card grids, per-section uppercase eyebrows.
 - Cold, sterile hospital aesthetic (harsh clinical white/blue, stock photos of test tubes and gloved hands).
 - Cheap budget-clinic look: clip-art icons, loud discount badges, crowded service-tile walls.
-- Childish "kids' clinic" cliche: primary-color cartoons, balloons, comic fonts. Warmth comes from color, type and photography, not cartoons.
+- Anything that feels clinical, intimidating or invasive for a sensitive subject. Warmth and reassurance come from color, type and photography.
 
 ## Design Principles
 

@@ -1,8 +1,13 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 
-// Offset so anchored targets are not hidden under the sticky header.
-const HEADER_OFFSET = 90;
+// Offset so the section top lands flush right under the floating header,
+// including the gap above the bar. A little breathing room is added.
+const getHeaderOffset = () => {
+  const bar = document.querySelector<HTMLElement>(".header-inner");
+  if (bar) return Math.round(bar.getBoundingClientRect().bottom) + 12;
+  return 88;
+};
 
 export function useSmoothScroll() {
   useEffect(() => {
@@ -45,12 +50,14 @@ export function useSmoothScroll() {
 
       event.preventDefault();
 
+      const headerOffset = getHeaderOffset();
+
       if (lenis) {
         if (toTop) lenis.scrollTo(0, { duration: 1 });
-        else if (target) lenis.scrollTo(target, { offset: -HEADER_OFFSET });
+        else if (target) lenis.scrollTo(target, { offset: -headerOffset });
       } else {
         const top = target
-          ? target.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET
+          ? target.getBoundingClientRect().top + window.scrollY - headerOffset
           : 0;
         window.scrollTo({ top, behavior: reduce ? "auto" : "smooth" });
       }

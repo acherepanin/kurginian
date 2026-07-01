@@ -19,14 +19,14 @@ src/content/
 | Поле | Тип | Содержимое |
 |------|-----|-----------|
 | `doctor` | объект | `name`, `role`, `location`, `portraitAlt` (alt-текст портрета). |
-| `nav` | объект | Подписи пунктов меню: `services`, `prices`, `about`, `faq`. |
+| `nav` | объект | Подписи пунктов меню: `services`, `prices`, `about`, `reviews`, `faq`. |
 | `lang` | объект | `switchTo` (подпись/aria кнопки языка), `current`. |
-| `hero` | объект | `badge`, `summary`, `ctaPrimary`, `ctaSecondary`, `chips[]`, `scrollCue`. |
-| `stats` | массив | `{ value, label }` — карточки статистики. |
+| `hero` | объект | `badge`, `summary`, `ctaPrimary`, `ctaSecondary`, `chips[]`. |
+| `services` | объект | `eyebrow`, `heading`, `note`, `items[]` (`{ title, desc }`) — слайды направлений. |
+| `prices` | объект | `eyebrow`, `heading`, `note`, `items[]` (`{ title, desc, price }`) — прайс-лист. |
 | `about` | объект | `eyebrow`, `heading`, `body[]` (абзацы), `credentials[]` (`{ period, title, place }`). |
-| `services` | объект | `eyebrow`, `heading`, `note`, `hint`, `items[]` (`{ title, desc }`) — слайды. |
-| `skills` | объект | `eyebrow`, `heading`, `note`, `groups[]` (`{ title, items[] }`) — навыки и качества тегами. |
-| `visit` | объект | `eyebrow`, `heading`, `steps[]` (`{ title, desc }`). |
+| `certificates` | объект | `eyebrow`, `heading`, `note`, `items[]` (`{ title, meta?, image? }`) — слайдер; `image` открывается по клику. |
+| `reviews` | объект | `eyebrow`, `heading`, `note`, `items[]` (`{ name, meta, text, rating, avatar? }`) — слайдер; `avatar` (фото) открывается по клику. |
 | `faq` | объект | `eyebrow`, `heading`, `items[]` (`{ q, a }`). |
 | `contact` | объект | `eyebrow`, `heading`, `body`, `ctaPrimary`, `note`, `channels[]`. |
 | `sticky` | объект | `label` — подпись плавающей кнопки. |
@@ -46,17 +46,19 @@ src/content/
 | `telegram` | самолётик | новая вкладка |
 | `phone` | трубка | `tel:` в том же окне |
 | `email` | конверт | `mailto:` в том же окне |
-| `map` | пин | новая вкладка (карта) |
+| `map` | пин | новая вкладка (карта); используется для адреса приёма |
 
 ## Как редактировать
 
 1. **Изменить текст** — найдите нужное поле в `ru.ts`/`en.ts` и отредактируйте строку. Меняйте обе версии.
 2. **Добавить направление** — добавьте `{ title, desc }` в `services.items` (в обоих языках). Слайдер и точки навигации подстроятся автоматически.
-3. **Добавить навык/качество** — добавьте строку в нужную группу `skills.groups[].items`.
-4. **Добавить вопрос** — добавьте `{ q, a }` в `faq.items`.
-5. **Сменить контакты** — отредактируйте `contact.channels` (и `value`, и `href`).
+3. **Изменить цену** — правьте `prices.items[].price` (строка, например `«от 3 500 ₽»` или `«по договорённости»`).
+4. **Добавить отзыв** — добавьте `{ name, meta, text, rating }` в `reviews.items`. `rating` — число 1–5, столько звёзд подсветится. Необязательно: `avatar` — путь к фото (открывается по клику), иначе показывается заглушка с инициалами.
+5. **Добавить сертификат** — добавьте `{ title, meta?, image? }` в `certificates.items`. Если указать `image` (путь к фото), появится миниатюра, а по клику откроется полноразмерное изображение.
+6. **Добавить вопрос** — добавьте `{ q, a }` в `faq.items`.
+7. **Сменить контакты** — отредактируйте `contact.channels` (и `value`, и `href`).
 
-> Цен на странице нет: в исходном резюме нет данных о стоимости. Если понадобится прайс, верните секцию `prices` в `types.ts` и компонент по образцу `Skills.tsx`.
+> Разделы «образование/опыт/сертификаты» (`about`), «отзывы» (`reviews`) и «цены» (`prices`) содержат заглушки-образцы. Замените их реальными данными перед публикацией; вымышленные отзывы публиковать как реальные нельзя.
 
 ## Хранение языка
 

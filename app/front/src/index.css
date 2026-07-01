@@ -45,6 +45,8 @@
 
   --maxw: 73rem;
   --prose: 40rem;
+  /* Horizontal page gutter, reused by .shell and full-bleed sliders. */
+  --gutter: clamp(1.1rem, 0.7rem + 2vw, 2.2rem);
 
   /* Signature form: an arched "portal/niche" used on the portrait. */
   --arch: 47% 47% 16px 16px / 33% 33% 3% 3%;
@@ -64,12 +66,12 @@
 
 html {
   -webkit-text-size-adjust: 100%;
-  scroll-padding-top: 90px;
+  scroll-padding-top: 88px;
 }
 
 body {
   margin: 0;
-  background: var(--bg);
+  background-color: var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
   font-size: var(--step-0);
@@ -141,11 +143,30 @@ html.lenis body {
   padding-block: var(--space-xl);
 }
 
+/* Hairline divider between sections, aligned to the content column and
+   softly faded at both ends. */
+.rule {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+  height: 1px;
+  border: 0;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--line) 18%,
+    var(--line) 82%,
+    transparent
+  );
+  background-clip: content-box;
+}
+
 .shell {
   width: 100%;
   max-width: var(--maxw);
   margin-inline: auto;
-  padding-inline: clamp(1.1rem, 0.7rem + 2vw, 2.2rem);
+  padding-inline: var(--gutter);
 }
 
 .eyebrow {

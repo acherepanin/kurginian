@@ -12,7 +12,7 @@ export function StickyCta() {
       const contactTop = contact
         ? contact.getBoundingClientRect().top
         : Infinity;
-      setShow(window.scrollY > 520 && contactTop > window.innerHeight * 0.6);
+      setShow(window.scrollY > 400 && contactTop > window.innerHeight * 0.6);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -20,11 +20,27 @@ export function StickyCta() {
   }, []);
 
   return (
-    <div className={`sticky-cta${show ? " is-visible" : ""}`} aria-hidden={!show}>
-      <a className="btn btn-primary btn-block" href="#contact" tabIndex={show ? 0 : -1}>
-        <CalendarHeart size={18} strokeWidth={2} />
-        {c.contact.ctaPrimary}
+    <>
+      <div className={`sticky-cta${show ? " is-visible" : ""}`} aria-hidden={!show}>
+        <a
+          className="btn btn-primary btn-block"
+          href="#contact"
+          tabIndex={show ? 0 : -1}
+        >
+          <CalendarHeart size={18} strokeWidth={2} />
+          {c.contact.ctaPrimary}
+        </a>
+      </div>
+
+      <a
+        className={`book-fab${show ? " is-visible" : ""}`}
+        href="#contact"
+        aria-label={c.contact.ctaPrimary}
+        title={c.contact.ctaPrimary}
+        tabIndex={show ? 0 : -1}
+      >
+        <CalendarHeart size={24} strokeWidth={1.9} />
       </a>
-    </div>
+    </>
   );
 }

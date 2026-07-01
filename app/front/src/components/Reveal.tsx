@@ -8,7 +8,7 @@ interface RevealProps {
   delay?: number;
   y?: number;
   className?: string;
-  as?: "div" | "section" | "li" | "article" | "header";
+  as?: "div" | "section" | "li" | "article" | "header" | "figure";
 }
 
 export function Reveal({
