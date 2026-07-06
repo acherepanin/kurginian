@@ -268,7 +268,7 @@ export const en: SiteContent = {
       },
       {
         label: "Instagram",
-        value: "@dr_kurginyan",
+        value: "Message on Instagram",
         href: "https://www.instagram.com/dr_kurginyan",
         kind: "instagram",
       },

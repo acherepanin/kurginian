@@ -268,7 +268,7 @@ export const ru: SiteContent = {
       },
       {
         label: "Instagram",
-        value: "@dr_kurginyan",
+        value: "Написать в Instagram",
         href: "https://www.instagram.com/dr_kurginyan",
         kind: "instagram",
       },
