@@ -98,6 +98,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
+  min-width: 0;
   text-decoration: none;
   color: inherit;
 }
@@ -109,23 +110,26 @@
   border-radius: 50%;
   background-color: var(--surface-2);
   background-repeat: no-repeat;
-  background-size: 175%;
-  background-position: 50% 4%;
+  background-size: 260%;
+  background-position: 50% 20%;
   box-shadow: inset 0 0 0 1.5px oklch(0.72 0.13 74 / 0.55);
 }
 .brand-text {
   display: flex;
   flex-direction: column;
+  min-width: 0;
   line-height: 1.15;
 }
 .brand-name {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.02rem;
+  font-size: clamp(0.9rem, 0.82rem + 0.42vw, 1.02rem);
+  max-width: 100%;
 }
 .brand-role {
-  font-size: 0.76rem;
+  font-size: clamp(0.68rem, 0.64rem + 0.2vw, 0.76rem);
   color: var(--muted);
+  max-width: 100%;
 }
 .site-nav {
   display: none;
@@ -136,6 +140,7 @@
   color: var(--muted);
   font-weight: 500;
   font-size: var(--step--1);
+  white-space: nowrap;
   position: relative;
   transition: color 0.2s var(--ease-out);
 }
@@ -162,6 +167,7 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  flex-shrink: 0;
 }
 .header-cta {
   padding: 0.55rem 1.05rem;
@@ -317,7 +323,7 @@
 .hero-summary {
   margin-block: var(--space-sm);
   color: var(--muted);
-  font-size: var(--step-1);
+  font-size: var(--step-0);
   max-width: 38ch;
   line-height: 1.55;
 }
@@ -469,7 +475,7 @@
 }
 .price-desc {
   color: var(--muted);
-  font-size: var(--step--1);
+  font-size: var(--step-0);
   max-width: 52ch;
 }
 .price-value {
@@ -487,7 +493,7 @@
 }
 .about-text {
   color: var(--ink);
-  font-size: var(--step-1);
+  font-size: var(--step-0);
   line-height: 1.6;
   max-width: 60ch;
   margin-block: 0 var(--space-sm);
@@ -637,7 +643,7 @@
   font-weight: 600;
 }
 .service-title {
-  font-size: var(--step-2);
+  font-size: var(--step-1);
   margin: 0;
 }
 .service-desc {
@@ -687,6 +693,19 @@
   background: var(--accent-soft);
   color: var(--accent-deep);
 }
+.cert-media {
+  position: relative;
+}
+.cert-media.is-multi {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.35rem;
+  overscroll-behavior-x: contain;
+}
 .cert-thumb {
   display: block;
   padding: 0;
@@ -695,6 +714,30 @@
   overflow: hidden;
   background: var(--surface);
   aspect-ratio: 4 / 3;
+  width: 100%;
+}
+.cert-media.is-multi .cert-thumb {
+  flex: 0 0 82%;
+  width: auto;
+  scroll-snap-align: start;
+}
+.cert-count {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: oklch(0.18 0.05 265 / 0.72);
+  color: var(--on-primary);
+  font-size: var(--step--1);
+  font-weight: 600;
+  line-height: 1;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
 }
 .cert-thumb img {
   width: 100%;
@@ -834,6 +877,35 @@
 .lightbox-close:hover {
   background: oklch(1 0 0 / 0.24);
 }
+.lightbox-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  border: 1px solid oklch(1 0 0 / 0.2);
+  background: oklch(1 0 0 / 0.12);
+  color: var(--on-primary);
+  transition: background-color 0.2s var(--ease-out);
+}
+.lightbox-nav:hover {
+  background: oklch(1 0 0 / 0.24);
+}
+.lightbox-prev {
+  left: clamp(0.6rem, 0.2rem + 2vw, 1.6rem);
+}
+.lightbox-next {
+  right: clamp(0.6rem, 0.2rem + 2vw, 1.6rem);
+}
+.lightbox-count {
+  display: block;
+  margin-top: 0.2rem;
+  font-weight: 600;
+  color: oklch(0.82 0.02 264);
+}
 
 /* ============ FAQ ============ */
 .faq-grid {
@@ -910,14 +982,14 @@
   background: var(--accent);
 }
 .contact-title {
-  font-size: var(--step-4);
+  font-size: var(--step-3);
   color: var(--on-primary);
   margin-block: 0.5rem var(--space-sm);
   max-width: 16ch;
 }
 .contact-body {
   color: oklch(0.92 0.01 264);
-  font-size: var(--step-1);
+  font-size: var(--step-0);
   max-width: 42ch;
   margin-block: 0 var(--space-md);
 }
@@ -1078,7 +1150,7 @@
 }
 
 /* ============ Responsive ============ */
-@media (max-width: 479px) {
+@media (max-width: 359px) {
   .brand-text {
     display: none;
   }

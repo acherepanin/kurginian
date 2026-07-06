@@ -3,7 +3,7 @@ import type { SiteContent } from "./types";
 export const en: SiteContent = {
   doctor: {
     name: "Kristina Kurginyan",
-    role: "Obstetrician-Gynecologist",
+    role: "Obstetrician-gynecologist, ultrasound diagnostics",
     portraitAlt: "Kristina Kurginyan, obstetrician-gynecologist, in her consulting room",
   },
   nav: {
@@ -27,7 +27,7 @@ export const en: SiteContent = {
   hero: {
     badge: "By appointment",
     summary:
-      "Pregnancy planning and management, gynecological concerns. Evidence-based medicine.",
+      "Postpartum recovery. Pregnancy planning and management, gynecological concerns. Evidence-based medicine.",
     ctaPrimary: "Book an appointment",
     ctaSecondary: "Services & pricing",
     chips: ["Obstetrician-Gynecologist", "Pregnancy management", "Ultrasound on-site"],
@@ -95,17 +95,17 @@ export const en: SiteContent = {
     ],
     credentials: [
       {
-        period: "2014",
+        period: "2017 — 2023",
         title: "General Medicine (specialist degree)",
         place: "Medical university — add name",
       },
       {
-        period: "2016",
+        period: "2023 — 2025",
         title: "Residency in Obstetrics & Gynecology",
         place: "Add institution",
       },
       {
-        period: "2016 — now",
+        period: "2025 — now",
         title: "Obstetrician-Gynecologist",
         place: "Add clinic and city",
       },
@@ -257,13 +257,13 @@ export const en: SiteContent = {
       {
         label: "Telegram",
         value: "Message on Telegram",
-        href: "https://t.me/+79993798565",
+        href: "https://t.me/kris_mdk",
         kind: "telegram",
       },
       {
         label: "MAX",
         value: "Message on MAX",
-        href: "https://max.ru/",
+        href: "https://max.ru/u/f9LHodD0cOJTqP_zeQEmM1wWyD9Yy276Oi5XB_YWrYfbhSioeySsxHW0qmQ",
         kind: "max",
       },
       {

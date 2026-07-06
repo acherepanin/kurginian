@@ -25,8 +25,8 @@ export function Portrait({ src, alt, initials }: PortraitProps) {
     <img
       src={src}
       alt={alt}
-      width={900}
-      height={1350}
+      width={1047}
+      height={1448}
       fetchPriority="high"
       onError={() => setFailed(true)}
     />

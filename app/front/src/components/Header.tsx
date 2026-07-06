@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useContent } from "../hooks/useContent";
 import { LangToggle } from "./LangToggle";
+import { TruncatedText } from "./TruncatedText";
 
 const AVATAR_URL = `${import.meta.env.BASE_URL}portrait.png`;
 
@@ -62,8 +63,8 @@ export function Header() {
                 style={{ backgroundImage: `url(${AVATAR_URL})` }}
               />
               <span className="brand-text">
-                <span className="brand-name">{c.doctor.name}</span>
-                <span className="brand-role">{c.doctor.role}</span>
+                <TruncatedText text={c.doctor.name} className="brand-name" />
+                <TruncatedText text={c.doctor.role} className="brand-role" />
               </span>
             </a>
             <nav className="site-nav" aria-label="Primary">

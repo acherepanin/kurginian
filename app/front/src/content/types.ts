@@ -52,7 +52,7 @@ export interface SiteContent {
     heading: string;
     note: string;
     hint: string;
-    items: { title: string; meta?: string; image?: string }[];
+    items: { title: string; meta?: string; image?: string; images?: string[] }[];
   };
   reviews: {
     eyebrow: string;

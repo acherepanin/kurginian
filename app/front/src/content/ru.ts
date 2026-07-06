@@ -2,9 +2,9 @@ import type { SiteContent } from "./types";
 
 export const ru: SiteContent = {
   doctor: {
-    name: "Кристина Кургинян",
-    role: "Акушер-гинеколог",
-    portraitAlt: "Кристина Кургинян, акушер-гинеколог, в кабинете приёма",
+    name: "Кургинян Кристина Сергеевна",
+    role: "Врач акушер-гинеколог, УЗД",
+    portraitAlt: "Кургинян Кристина Сергеевна, врач акушер-гинеколог, в кабинете приёма",
   },
   nav: {
     services: "Услуги",
@@ -27,7 +27,7 @@ export const ru: SiteContent = {
   hero: {
     badge: "Приём по записи",
     summary:
-      "Планирование и ведение беременности, гинекологические вопросы. Доказательная медицина.",
+      "Послеродовое восстановление. Планирование и ведение беременности, гинекологические вопросы. Доказательная медицина.",
     ctaPrimary: "Записаться на приём",
     ctaSecondary: "Услуги и цены",
     chips: ["Акушер-гинеколог", "Ведение беременности", "УЗИ на приёме"],
@@ -95,17 +95,17 @@ export const ru: SiteContent = {
     ],
     credentials: [
       {
-        period: "2014",
+        period: "2017 — 2023",
         title: "Специалитет «Лечебное дело»",
         place: "Медицинский университет — укажите вуз",
       },
       {
-        period: "2016",
+        period: "2023 — 2025",
         title: "Ординатура «Акушерство и гинекология»",
         place: "Укажите учреждение",
       },
       {
-        period: "2016 — н.в.",
+        period: "2025 — н.в.",
         title: "Врач акушер-гинеколог",
         place: "Укажите клинику и город",
       },
@@ -257,13 +257,13 @@ export const ru: SiteContent = {
       {
         label: "Telegram",
         value: "Написать в Telegram",
-        href: "https://t.me/+79993798565",
+        href: "https://t.me/kris_mdk",
         kind: "telegram",
       },
       {
         label: "MAX",
         value: "Написать в MAX",
-        href: "https://max.ru/",
+        href: "https://max.ru/u/f9LHodD0cOJTqP_zeQEmM1wWyD9Yy276Oi5XB_YWrYfbhSioeySsxHW0qmQ",
         kind: "max",
       },
       {
