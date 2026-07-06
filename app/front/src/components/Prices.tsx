@@ -23,7 +23,9 @@ export function Prices() {
                 <span className="price-title">{item.title}</span>
                 <span className="price-desc">{item.desc}</span>
               </span>
-              <span className="price-value">{item.price}</span>
+              {item.price ? (
+                <span className="price-value">{item.price}</span>
+              ) : null}
             </Reveal>
           ))}
         </ul>

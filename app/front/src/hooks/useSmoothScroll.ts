@@ -51,13 +51,22 @@ export function useSmoothScroll() {
       event.preventDefault();
 
       const headerOffset = getHeaderOffset();
+      // Sections carry a large top padding, so aligning the section box top
+      // under the header leaves the heading mid-viewport. Skip most of that
+      // padding so the heading starts near the top, just below the header.
+      const padTop = target
+        ? parseFloat(getComputedStyle(target).paddingTop) || 0
+        : 0;
 
       if (lenis) {
         if (toTop) lenis.scrollTo(0, { duration: 1 });
-        else if (target) lenis.scrollTo(target, { offset: -headerOffset });
+        else if (target) lenis.scrollTo(target, { offset: padTop - headerOffset });
       } else {
         const top = target
-          ? target.getBoundingClientRect().top + window.scrollY - headerOffset
+          ? target.getBoundingClientRect().top +
+            window.scrollY +
+            padTop -
+            headerOffset
           : 0;
         window.scrollTo({ top, behavior: reduce ? "auto" : "smooth" });
       }

@@ -40,6 +40,7 @@ export function Header() {
     { href: "#services", label: c.nav.services },
     { href: "#prices", label: c.nav.prices },
     { href: "#about", label: c.nav.about },
+    { href: "#certificates", label: c.nav.certificates },
     { href: "#reviews", label: c.nav.reviews },
     { href: "#faq", label: c.nav.faq },
   ];

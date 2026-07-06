@@ -1,17 +1,12 @@
-import { useState } from "react";
 import { Quote, Star } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { SliderArrows, SliderDots } from "./Slider";
-import { Avatar } from "./Avatar";
-import { Lightbox } from "./Lightbox";
-import { TruncatedText } from "./TruncatedText";
 import { useSlider } from "../hooks/useSlider";
 import { useContent } from "../hooks/useContent";
 
 export function Reviews() {
   const { c } = useContent();
   const { trackRef, atStart, atEnd, active, scrollByCard } = useSlider();
-  const [zoom, setZoom] = useState<{ src: string; alt: string } | null>(null);
 
   return (
     <section className="section reviews" id="reviews">
@@ -47,17 +42,6 @@ export function Reviews() {
               ))}
             </div>
             <blockquote className="review-text">{item.text}</blockquote>
-            <figcaption className="review-meta">
-              <Avatar
-                name={item.name}
-                src={item.avatar}
-                onOpen={(src) => setZoom({ src, alt: item.name })}
-              />
-              <span className="review-person">
-                <TruncatedText className="review-name" text={item.name} />
-                <TruncatedText className="review-tag" text={item.meta} />
-              </span>
-            </figcaption>
           </li>
         ))}
       </ul>
@@ -71,10 +55,6 @@ export function Reviews() {
           onNext={() => scrollByCard(1)}
         />
       </div>
-
-      {zoom ? (
-        <Lightbox src={zoom.src} alt={zoom.alt} onClose={() => setZoom(null)} />
-      ) : null}
     </section>
   );
 }

@@ -4,6 +4,7 @@ import {
   MessageCircle,
   Phone,
   Send,
+  Camera,
   type LucideIcon,
 } from "lucide-react";
 import { Reveal } from "./Reveal";
@@ -13,6 +14,8 @@ import { useContent } from "../hooks/useContent";
 const iconFor: Record<string, LucideIcon> = {
   whatsapp: MessageCircle,
   telegram: Send,
+  max: MessageCircle,
+  instagram: Camera,
   phone: Phone,
   email: Mail,
   map: MapPin,
@@ -23,7 +26,9 @@ const sameWindow = new Set(["phone", "email"]);
 export function Contact() {
   const { c } = useContent();
   const primaryHref =
-    c.contact.channels.find((ch) => ch.kind === "whatsapp")?.href ?? "#";
+    c.contact.channels.find((ch) => ch.kind === "max")?.href ??
+    c.contact.channels[0]?.href ??
+    "#";
 
   return (
     <section className="section contact" id="contact">

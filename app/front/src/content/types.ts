@@ -8,6 +8,7 @@ export interface SiteContent {
     services: string;
     prices: string;
     about: string;
+    certificates: string;
     reviews: string;
     faq: string;
     menu: string;
@@ -38,7 +39,7 @@ export interface SiteContent {
     eyebrow: string;
     heading: string;
     note: string;
-    items: { title: string; desc: string; price: string }[];
+    items: { title: string; desc: string; price?: string }[];
   };
   about: {
     eyebrow: string;
