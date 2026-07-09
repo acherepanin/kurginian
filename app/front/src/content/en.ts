@@ -97,17 +97,17 @@ export const en: SiteContent = {
       {
         period: "2017 — 2023",
         title: "Pediatrics (specialist degree)",
-        place: "Medical university — add name",
+        place: "Tver State Medical University",
       },
       {
         period: "2023 — 2025",
         title: "Residency in Obstetrics & Gynecology",
-        place: "Add institution",
+        place: "Pirogov NMSC",
       },
       {
         period: "2025 — now",
         title: "Obstetrician-Gynecologist",
-        place: "Add clinic and city",
+        place: "Dmitrov Maternity Hospital",
       },
     ],
   },
