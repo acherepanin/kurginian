@@ -96,7 +96,7 @@ export const en: SiteContent = {
     credentials: [
       {
         period: "2017 — 2023",
-        title: "General Medicine (specialist degree)",
+        title: "Pediatrics (specialist degree)",
         place: "Medical university — add name",
       },
       {
@@ -128,18 +128,13 @@ export const en: SiteContent = {
         image: "./certificates/cert-2.jpg",
       },
       {
-        title: "Residency: obstetrician-gynecologist",
-        meta: "Pirogov NMSC, 2025",
-        image: "./certificates/cert-3.jpg",
-      },
-      {
         title: "Professional retraining: Statistics & digital analysis of medical data",
         meta: "Pirogov University, 2025",
         image: "./certificates/cert-4.jpg",
       },
       {
-        title: "Professional retraining diploma",
-        meta: "Pirogov University, 2025",
+        title: "Professional retraining: Ultrasound diagnostics",
+        meta: "Pirogov NMSC, 2025",
         image: "./certificates/cert-5.jpg",
       },
       {
